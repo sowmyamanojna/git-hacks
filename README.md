@@ -16,6 +16,7 @@ The following list of hacks have been largely sourced from the git documentation
 	git reset		(resets everything that has been staged)
 
 ### Deal with deleted large files
+	git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch <file/dir>' HEAD
 
 ### Revert HEAD back by a few commits
 	git revert HEAD~<number of commits to go back>
