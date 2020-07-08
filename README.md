@@ -20,3 +20,7 @@ The following list of hacks have been largely sourced from the git documentation
 
 ### Revert HEAD back by a few commits
 	git revert HEAD~<number of commits to go back>
+
+### Force pull from a repository
+	git fetch --all
+	git reset --hard origin/<branch_name>
