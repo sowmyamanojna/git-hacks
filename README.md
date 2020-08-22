@@ -11,6 +11,17 @@ The following list of hacks have been largely sourced from the git documentation
 ### Amend a recent commit (before push)
 	git commit --amend -m '<Amended commit message>'
 
+### Amend a commit (way after push too :wink:)
+	git rebase -i HEAD~n 
+
+- Once the default editor props up, copy the commits on top and change pick to reword.
+- If many more commit files open, change the commit files in all of them.
+- Force push the amended commits.
+
+```
+git push --force
+```
+
 ### Unstage a recent add
 	git reset <file/files to be unstaged> 	(or)
 	git reset		(resets everything that has been staged)
@@ -24,3 +35,6 @@ The following list of hacks have been largely sourced from the git documentation
 ### Force pull from a repository
 	git fetch --all
 	git reset --hard origin/<branch_name>
+
+### Get remote URL
+	git remote show origin
