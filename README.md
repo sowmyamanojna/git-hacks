@@ -14,7 +14,7 @@ The following list of hacks have been largely sourced from the git documentation
 ### Amend a commit (way after push too :wink:)
 	git rebase -i HEAD~n 
 
-- Once the default editor props up, copy the commits on top and change pick to reword.
+- Once the default editor pops up, copy the commits on top and change pick to reword.
 - If many more commit files open, change the commit files in all of them.
 - Force push the amended commits.
 
