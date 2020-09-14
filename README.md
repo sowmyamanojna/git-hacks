@@ -8,6 +8,9 @@ The following list of hacks have been largely sourced from the git documentation
 	git remote add origin <remote url>.git
 	git push origin master
 
+### Make an empty commit (to trigger rebuild)
+	git commit --allow-empty -m "Trigger rebuild"
+
 ### Amend a recent commit (before push)
 	git commit --amend -m '<Amended commit message>'
 
