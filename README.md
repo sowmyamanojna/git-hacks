@@ -41,3 +41,6 @@ git push --force
 
 ### Get remote URL
 	git remote show origin
+
+### Remove sensitive data
+	git filter-branch --force --index-filter "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" --prune-empty --tag-name-filter cat -- --all
