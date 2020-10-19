@@ -44,3 +44,8 @@ git push --force
 
 ### Remove sensitive data
 	git filter-branch --force --index-filter "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" --prune-empty --tag-name-filter cat -- --all
+
+### Break commits into batches and push them
+	max=$(git log --oneline|wc -l); for i in $(seq $max -500 1); do echo $i; git push origin master~$i:refs/heads/master; done; git push origin master
+
+- The batch size of each of the push can be changed here - `for i in $(seq $max -500 1);`. The value is set to 500 in this case.
