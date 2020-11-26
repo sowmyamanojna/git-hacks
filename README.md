@@ -42,6 +42,9 @@ git push --force
 ### Get remote URL
 	git remote show origin
 
+### Add a submodule
+	git submodule add <submodule-url> <path>
+
 ### Remove sensitive data
 	git filter-branch --force --index-filter "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" --prune-empty --tag-name-filter cat -- --all
 
@@ -49,3 +52,7 @@ git push --force
 	max=$(git log --oneline|wc -l); for i in $(seq $max -500 1); do echo $i; git push origin master~$i:refs/heads/master; done; git push origin master
 
 - The batch size of each of the push can be changed here - `for i in $(seq $max -500 1);`. The value is set to 500 in this case.
+
+### Set default editor for git
+	git config --global core.editor "subl -n -w"
+The above code is for Sublime Text. The value inside the quotes can be changed for different editors.
