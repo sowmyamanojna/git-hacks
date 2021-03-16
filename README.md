@@ -4,10 +4,11 @@ The following list of hacks have been largely sourced from the git documentation
 ### Initialize and add to a new repository
 ```git
 git init
-git add .
+git add README.md
 git commit -m <commit message>
+git branch -M main
 git remote add origin <remote url>.git
-git push origin master
+git push -u origin main
 ```
 
 ### Make an empty commit (to trigger rebuild)
@@ -37,6 +38,16 @@ git push --force
 ```git
 git reset <file/files to be unstaged> 	(or)
 git reset		(resets everything that has been staged)
+```
+
+### Pull from a repository
+```git
+git pull origin <branch-name>
+```
+
+### Push to a repository
+```git
+git push origin <branch-name>
 ```
 
 ### Deal with deleted large files
